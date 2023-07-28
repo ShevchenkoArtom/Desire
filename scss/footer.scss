@@ -1,0 +1,93 @@
+.footer {
+    background-color: #DFDFDF;
+    padding: 60px 0 0 0;
+    &__container {
+        max-width: 1130px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    &__top {
+        display: grid;
+        grid-template-columns: 8fr 4fr;
+        padding-bottom: 80px;
+        grid-auto-flow: dense;
+        .footer__links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width:768px) {
+            & {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                row-gap: 80px;
+            }
+        }
+    }
+    &__column {
+        &-title {
+            @include navbarText;
+            margin-bottom: 14px;
+        }
+        &.contact a {
+            @include navbarText;
+            font-size: 14px;
+            color: $gray;
+        }
+        p {
+            @include usualText;
+            margin-bottom: 16px;
+            max-width: 476px;
+        }
+        form {
+            input {
+                @include usualText;
+                padding: 6px 18px;
+                border-radius: 21px;
+                border: 1px solid #8D8C8C;
+                width: 60%;
+                margin-top: 22px;
+                &::placeholder {
+                    color: #8D8C8C;
+                }
+                margin-right: 9px;
+            }
+            button {
+                @include grayBtn;
+                width: 160px;
+            }
+            @media (max-width:768px) {
+                & {
+                    width: 100vw;
+                    button {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+        li a{
+            @include usualText;
+            font-weight: 600;
+            font-size: 14px;
+            transition: $transition;
+            &:hover {
+                color: $yellow;
+            }
+        }
+        li {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__bottom {
+        text-align: center;
+        background-color: $grayColor;
+        padding: 42px 0;
+        p {
+            @include usualText;
+            line-height: 28px;
+            color: #A1A1A1;
+        }
+    }
+}

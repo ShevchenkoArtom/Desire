@@ -1,0 +1,60 @@
+$gray: #363838;
+$grayColor: rgba(54, 56, 56, 0.90);
+$grayColorText: #5A5A5A;
+$yellow: #F1D152;
+$transition: .3s all ease;
+
+@mixin navbarText {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    color: $grayColor;
+    transition: $transition;
+    a {
+        color: $grayColor;
+        &:hover {
+            color: $yellow;
+        }
+    }
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+@mixin h1 {
+    color: $gray;
+    font-family: Montserrat;
+    font-size: 110px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+@mixin usualText {
+    color: $grayColorText;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+@mixin grayBtn {
+    padding: 6px 12px;
+    border-radius: 21px;
+    background: $gray;
+    @include usualText;
+    color: #fff;
+    outline: 2px solid $gray;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        background-color: transparent;
+        color: $gray;
+        font-weight: 600;
+    }
+}
