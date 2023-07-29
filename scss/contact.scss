@@ -1,0 +1,131 @@
+.map {
+    max-width: 1920px;
+    height: 580px;
+    margin: 0 auto;
+    transition: 0s;
+    @media (max-width:768px) {
+        height: calc(100vh - 71px);
+    }
+}
+
+.contactUs {
+    margin-top: 55px;
+    margin-bottom: 100px;
+    &__container {
+        @include container;
+    }
+    &__title {
+        @include sectionTitle;
+        margin-bottom: 30px;
+    }
+    .head__info-subline {
+        width: 200px;
+        height: 2px;
+    }
+    &__info {
+        margin: 40px 0 0 auto;
+        max-width: 830px;
+        .social a {
+            @include usualText;
+            font-size: 14px;
+            margin-right: 20px;
+            transition: $transition;
+            margin-bottom: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                color: $yellow;
+            }
+        }
+        &-text {
+            @include usualText;
+            margin-bottom: 10px;
+        }
+        &-address {
+            @include usualText;
+            color: $grayColorText;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+        .footer__colum-link {
+            @include navbarText;
+            &:hover {
+                color: $yellow;
+            }
+        }
+        @media (max-width:1024px) {
+            & {
+                max-width: 60%;
+            }
+        }
+        @media (max-width:768px) {
+            & {
+                max-width: 100%;
+                .social a {
+                    font-size: 12px;
+                }
+            }
+        }
+        @media (max-width:768px) {
+            & {
+                .social a {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    &__form {
+        &-top  {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 10px;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            @include inputStyle;
+        }
+        textarea {
+            @include inputStyle;
+            width: 100%;
+            max-height: 125px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        button {
+            @include grayBtn;
+            width: 180px;
+        }
+    }
+}
+
+.examplesOfWorks {
+    // &__container {
+    //     width: 1920px;
+    //     margin: 0 auto;
+    // }
+    &-slider {
+        &__item {
+            max-width: 170px;
+            max-height: 170px;
+        }
+    }
+    margin-bottom: 100px;
+}
+.examplesOfWorks-slider {
+    position: relative;
+}
+.examplesOfWorks .swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    &-bullet {
+        width: 8px;
+        height: 8px;
+        background-color:$gray;
+        transition: $transition;
+        &-active {
+            background-color: $yellow;
+        }
+    }
+}

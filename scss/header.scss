@@ -9,9 +9,7 @@
         padding: 20px 0;
     }
     &__container {
-        max-width: 1130px;
-        padding: 0 10px;
-        margin: 0 auto;
+        @include container;
     }
     &__inner {
         @include flex-between;
@@ -129,9 +127,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     &__container {
-        max-width: 1130px;
-        padding: 0 19px;
-        margin: 0 auto;
+        @include container;
     }
     &__inner {
         align-items: center;

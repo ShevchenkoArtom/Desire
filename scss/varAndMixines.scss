@@ -41,20 +41,49 @@ $transition: .3s all ease;
     font-style: normal;
     font-weight: 400;
     line-height: 27px;
+    @media (max-width:768px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
 @mixin grayBtn {
-    padding: 6px 12px;
+    padding: 4px 10px;
     border-radius: 21px;
     background: $gray;
     @include usualText;
     color: #fff;
-    outline: 2px solid $gray;
+    border: 2px solid $gray;
     cursor: pointer;
     transition: $transition;
     &:hover {
         background-color: transparent;
         color: $gray;
         font-weight: 600;
+    }
+}
+
+@mixin sectionTitle {
+    color: $gray;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+@mixin container {
+    max-width: 1130px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+@mixin inputStyle {
+    @include usualText;
+    padding: 6px 18px;
+    border-radius: 21px;
+    border: 1px solid #8D8C8C;
+    margin-top: 22px;
+    &::placeholder {
+        color: #8D8C8C;
     }
 }
